@@ -1,0 +1,13 @@
+import random
+colors = {"синій": "холод", "жовтий": "тепло", "оранжевий": "тепло", "фіолетовий": "холод"}
+secret = random.choice(list(colors.keys()))
+tries = 3
+while tries > 0:
+    guess = input("Колір: ")
+    if guess == secret:
+        print("Правильно")
+        break
+    print(f"Підказка: колір {colors[secret]}")
+    tries -= 1
+if tries == 0:
+    print(f"Загаданий колір: {secret}")
