@@ -1,0 +1,13 @@
+import random
+
+num = random.randint(1, 50)
+while True:
+    guess = int(input("Число від 1 до 50: "))
+    diff = abs(num - guess)
+    if diff == 0:
+        print("Правильно")
+        break
+    elif diff <= 10:
+        print("Близько")
+    else:
+        print("Далеко")
