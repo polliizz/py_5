@@ -1,0 +1,12 @@
+pin = str(random.randint(1111, 2222))
+attempts = 5
+while attempts > 0:
+    guess = input("Введіть PIN: ")
+    if guess == pin:
+        print("Правильно")
+        break
+    correct = sum(1 for a, b in zip(pin, guess) if a == b)
+    print(f"Ні. Цифр на місці: {correct}")
+    attempts -= 1
+if attempts == 0:
+    print(f"PIN був: {pin}")
